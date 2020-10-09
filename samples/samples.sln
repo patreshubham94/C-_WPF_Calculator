@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCodeOnly", "WpfCodeOnly\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWithCompiledMarkup", "CodeWithCompiledMarkup\CodeWithCompiledMarkup.csproj", "{19DB66FE-612A-4994-A63C-70E60BAF548A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorSetter", "ColorSetter\ColorSetter.csproj", "{8FE0DBDD-6538-4247-955D-D0F006C23D48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{19DB66FE-612A-4994-A63C-70E60BAF548A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19DB66FE-612A-4994-A63C-70E60BAF548A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19DB66FE-612A-4994-A63C-70E60BAF548A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE0DBDD-6538-4247-955D-D0F006C23D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE0DBDD-6538-4247-955D-D0F006C23D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE0DBDD-6538-4247-955D-D0F006C23D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE0DBDD-6538-4247-955D-D0F006C23D48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

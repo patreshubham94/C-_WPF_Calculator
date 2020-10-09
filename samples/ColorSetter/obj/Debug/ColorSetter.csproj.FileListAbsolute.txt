@@ -1,0 +1,16 @@
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\bin\Debug\ColorSetter.exe.config
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\bin\Debug\ColorSetter.exe
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\bin\Debug\ColorSetter.pdb
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\MainWindow.g.cs
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\App.g.cs
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter_MarkupCompile.cache
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter_MarkupCompile.lref
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\MainWindow.baml
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.g.resources
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.Properties.Resources.resources
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.csproj.GenerateResource.cache
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.csproj.CoreCompileInputs.cache
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.exe
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.pdb
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\ColorSetter.csprojAssemblyReference.cache
+C:\Users\320103928\BootCamp\wpf-knowledge\samples\ColorSetter\obj\Debug\GeneratedInternalTypeHelper.g.cs

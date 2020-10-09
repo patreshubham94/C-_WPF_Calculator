@@ -27,5 +27,18 @@ namespace CodeWithCompiledMarkup
         
 
         }
+
+        //private void button1_MouseEnter(object sender, MouseEventArgs e)
+        //{
+        //    button1.Width = 150;
+        //    button1.Height = 50;
+
+        //}
+
+        //private void button1_MouseLeave(object sender, MouseEventArgs e)
+        //{
+        //    button1.Width = 100;
+        //    button1.Height = 30;
+        //}
     }
 }
