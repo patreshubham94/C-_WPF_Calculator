@@ -1,0 +1,101 @@
+﻿<Window x:Class="CalculatorDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:validationrules="clr-namespace:CalculatorDemo.ValidationRules"
+        xmlns:local="clr-namespace:CalculatorDemo"
+        mc:Ignorable="d"
+        Title="CalculatorDemo" Height="450" Width="800">
+
+    
+        <StackPanel>
+        <TextBlock FontSize="20" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Gray">Calculator</TextBlock>
+            
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="385" Width="235" Background="Beige" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" ></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.Children>
+                <TextBlock Margin="3" FontSize="12" Foreground="Black" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="Operand 1" />
+                <TextBlock Margin="3" FontSize="12" Foreground="Black" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="Operand 2" />
+                <TextBlock Margin="3" FontSize="12" Foreground="Black" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Result" />
+
+                <TextBox x:Name="OperandOne" Grid.Row="0" Grid.Column="2" 
+                         Margin="3" Width="60" GotFocus="OperandOne_Focus" Style="{StaticResource ResourceKey=errorFeedbackStyle}">
+                    <TextBox.Text>
+                        <Binding Path = "OperandOne" Mode="TwoWay" ValidatesOnExceptions="True" NotifyOnValidationError="True" >
+                            <Binding.ValidationRules>
+                                <validationrules:OperandValidationRules></validationrules:OperandValidationRules>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+
+                </TextBox>
+
+                <TextBox x:Name="OperandTwo" Grid.Row="1" Grid.Column="2" 
+                         Margin="3" Width="60" GotFocus="OperandTwo_Focus" Style="{StaticResource ResourceKey=errorFeedbackStyle}">
+                    <TextBox.Text>
+                        <Binding Path = "OperandTwo" Mode="TwoWay" ValidatesOnExceptions="True" NotifyOnValidationError="True">
+                            <Binding.ValidationRules>
+                                <validationrules:OperandValidationRules></validationrules:OperandValidationRules>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <TextBox x:Name="Result" Text="{Binding Path = Res, Mode=TwoWay}" 
+                         Grid.Row="2" Grid.Column="2" Margin="3" Width="60"/>
+
+                <Button Style="{StaticResource ResourceKey=divButtonStyle}" Content="/" Grid.Row="4" Grid.Column="3" Click="Div_Button_Click" />
+                <Button Style="{StaticResource ResourceKey=multButtonStyle}" Content="*" Grid.Row="5" Grid.Column="3" Click="Multi_Button_Click"  />
+                <Button Style="{StaticResource ResourceKey=subButtonStyle}" Content="-" Grid.Row="6" Grid.Column="3" Click="Sub_Button_Click"/>
+                <Button Style="{StaticResource ResourceKey=addButtonStyle}" Content="+" Grid.Row="7" Grid.Column="3" Click="Add_Button_Click"/>
+                <Button Style="{StaticResource ResourceKey=dotButtonStyle}" x:Name="dot" Content="." Grid.Row="8" Grid.Column="2" Click="Button_Click"/>
+                <Button Style="{StaticResource ResourceKey=signButtonStyle}" Content="+/-" Grid.Row="8" Grid.Column="0" Click="Sign_Change" />
+
+                <Button Style="{StaticResource ResourceKey=invButtonStyle}" Content="1/x" Grid.Row="4" Grid.Column="0"  Click="Inverse_click"/>
+                <Button Style="{StaticResource ResourceKey=sqButtonStyle}" Content="Square" Grid.Row="4" Grid.Column="1"  Click="Square_click"/>
+                <Button Style="{StaticResource ResourceKey=sqrootButtonStyle}" Content="SqRoot" Grid.Row="4" Grid.Column="2"  Click="Sq_Root" />
+
+                <Button Style="{StaticResource ResourceKey=modButtonStyle}" Content="%" Grid.Row="3" Grid.Column="0" Click="Mod_Click"/>
+                <Button Style="{StaticResource ResourceKey=backButtonStyle}" x:Name="Back" Content="Back" Grid.Row="3" Grid.Column="3" Click="Back_Button_Click"/>
+                <Button Style="{StaticResource ResourceKey=eqButtonStyle}" Content="=" Grid.Row="8" Grid.Column="3" />
+                <Button Style="{StaticResource ResourceKey=ceButtonStyle}" x:Name="CE" Content="CE" Grid.Row="3" Grid.Column="1" Click="CE_Button_Click"/>
+                <Button Style="{StaticResource ResourceKey=clrButtonStyle}" Content="CLR" Grid.Row="3" Grid.Column="2" Click="Clr_Button_Click"/>
+
+                <Button Style="{StaticResource ResourceKey=zeroButtonStyle}" x:Name="zero" Grid.Row="8" Grid.Column="1" Click="Button_Click" >0</Button>
+                <Button Style="{StaticResource ResourceKey=oneButtonStyle}" x:Name="one" Grid.Row="7" Grid.Column="0" Click="Button_Click" >1</Button>
+                <Button Style="{StaticResource ResourceKey=twoButtonStyle}" x:Name="two" Grid.Row="7" Grid.Column="1" Click="Button_Click" >2</Button>
+                <Button Style="{StaticResource ResourceKey=threeButtonStyle}" x:Name="three" Grid.Row="7" Grid.Column="2" Click="Button_Click" >3</Button>
+                <Button Style="{StaticResource ResourceKey=fourButtonStyle}" x:Name="four" Grid.Row="6" Grid.Column="0" Click="Button_Click" >4</Button>
+                <Button Style="{StaticResource ResourceKey=fiveButtonStyle}" x:Name="five" Grid.Row="6" Grid.Column="1" Click="Button_Click" >5</Button>
+                <Button Style="{StaticResource ResourceKey=sixButtonStyle}" x:Name="six" Grid.Row="6" Grid.Column="2" Click="Button_Click" >6</Button>
+                <Button Style="{StaticResource ResourceKey=sevenButtonStyle}" x:Name="seven" Grid.Row="5" Grid.Column="0" Click="Button_Click" >7</Button>
+                <Button Style="{StaticResource ResourceKey=eightButtonStyle}" x:Name="eight" Grid.Row="5" Grid.Column="1" Click="Button_Click" >8</Button>
+                <Button Style="{StaticResource ResourceKey=nineButtonStyle}" x:Name="nine" Grid.Row="5" Grid.Column="2" Click="Button_Click" >9</Button>
+                
+                
+                
+            </Grid.Children>
+            </Grid>
+            
+        </StackPanel>
+
+    
+</Window>

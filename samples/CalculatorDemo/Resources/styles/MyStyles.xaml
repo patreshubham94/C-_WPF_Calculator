@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CalculatorDemo.Resources.styles">
+
+    <Style x:Key="buttonStyle" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="Width" Value="50"></Setter>
+            
+
+        </Style.Setters>
+
+        <Style.Triggers>
+            <!-- Property Trigger-->
+            <Trigger Property="IsMouseOver" Value="true">
+                <Trigger.Setters>
+                    <Setter Property="Width" Value="60"></Setter>
+                    <Setter Property="Height" Value="60"></Setter>
+
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="zeroButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="oneButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="twoButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="threeButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="fourButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="fiveButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="sixButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="sevenButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="eightButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="nineButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+
+    <Style x:Key="addButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="subButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="divButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="multButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="modButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    
+    <Style x:Key="sqButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="sqrootButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    
+    <Style x:Key="eqButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="ceButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="clrButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    
+    <Style x:Key="backButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="invButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="signButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+    <Style x:Key="dotButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=buttonStyle}"></Style>
+
+
+    <Style x:Key="errorFeedbackStyle">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="true">
+                <Trigger.Setters>
+                    <Setter Property="Validation.ErrorTemplate">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <AdornedElementPlaceholder x:Name="controlHolder"></AdornedElementPlaceholder>
+                                    <TextBlock FontSize="15" Foreground="Red">*</TextBlock>
+                                    <TextBlock Text="{Binding ElementName=controlHolder,Path=AdornedElement.(Validation.Errors)[0].ErrorContent}"></TextBlock>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger.Setters>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
